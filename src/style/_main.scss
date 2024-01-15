@@ -1,0 +1,945 @@
+@use "_variables.scss" as v;
+@use "_mixin.scss" as mix;
+
+.main{
+
+    &__inner{
+        max-width: v.$maxw;
+        margin: 0 auto;
+        padding: 36px 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }   
+
+
+    //タブレットサイズ
+    @media screen and (max-width : v.$tbw){
+        &__inner{
+            max-width: 100vw;
+            margin: 0 auto;
+            padding: 23px 44px;
+        }   
+
+    }
+    //SPサイズ
+    @media screen and (max-width : v.$spw){
+
+    }
+}
+
+.about{
+    padding-top: 14.2%;
+
+    width: 100vw;
+    &__topinner{
+        width: 100vw;
+        background:linear-gradient(#FFFFFF, #ffff15, );
+    }
+    &__inner{
+        max-width: v.$pcw;
+        width: 100%;
+        margin: 0 auto;
+        padding-top:0;
+        padding-right: clamp( 10px,10%, 210px);
+        padding-left: clamp( 10px,10%, 210px);
+        padding-bottom: 70px;
+
+    }
+    &__ttl{
+        @include mix.bg();
+        background: url('../images/about.svg');
+        width: 178px;
+        height: 81px;
+        background-repeat: no-repeat;
+        margin-bottom: 70px;
+    }
+    .jptxt{
+        width: 63%;
+        max-width: 990px;
+        min-width: 980px;
+        @media screen and (max-width : 1200px){
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+    }
+
+}
+
+@media screen and (max-width : v.$tbw){
+
+    .about{
+        padding-top: 11.5%;
+        &__inner{
+            padding-right: 13%;
+            padding-left: 13%;    
+        }
+        &__ttl{
+            @include mix.bg();
+            background: url('../images/about.svg');
+            width: 18.75vw;
+            height: 8.6vw;
+            background-repeat: no-repeat;
+            margin-bottom: 4.67vw;
+        }
+    }
+
+}
+
+
+.jptxt{
+    @include mix.fz(20);
+    line-height: 1.25;
+    @media screen and (max-width : v.$tbw){
+        @include mix.fz(15);
+    }
+
+}
+
+.main{
+    &__middle{
+        background: url('../images/bg1.jpg') no-repeat 0 top;
+        background-size: 100% auto;
+        padding-top: 14.2%;
+        &--inner{
+            width: 100vw;
+            background:linear-gradient(#FB33D9, #2409f8, );
+        }
+    }
+    &__company{
+        background: url('../images/bg2.jpg') no-repeat 0 top;
+        background-size: 100% auto;
+        padding-top: 14.2%;
+        &--inner{
+            width: 100vw;
+            background:linear-gradient(#FFFFFF, #ffff13, );
+            padding-top: 227px;
+        }
+    }
+}
+
+.whats{
+    padding-top: 178px;
+    max-width: v.$pcw;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: clamp( 10px,10%, 210px);
+    padding-left: clamp( 10px,10%, 210px);
+    &__cont{
+        margin-left: 26%;
+        display: flex;
+        justify-content: space-between;
+        &--img{
+            width: 27.1%;
+            max-width: 406px;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &__ttl{
+        @include mix.bg();
+        background: url('../images/candygirl.svg');
+        width: 547px;
+        height: 64px;
+        background-repeat: no-repeat;
+        margin-bottom: 80px;
+        @media screen and (max-width : 1400px){
+            width: 45.6vw;
+            height: 5.4vw;
+        }
+
+    }
+    .jptxt{
+        color: #FFF;
+    }
+}
+.amano{
+    padding-top: 266px;
+    max-width: v.$pcw;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: clamp( 10px,10%, 210px);
+    padding-left: clamp( 10px,10%, 210px);
+    &__ttl{
+        @include mix.bg();
+        background: url('../images/ttl_amano.svg');
+        width: 462px;
+        height: 64px;
+        background-repeat: no-repeat;
+        margin-bottom: 84px;
+        @media screen and (max-width : 1400px){
+            width: 33.3vw;
+            height: 5.4vw;
+        }
+    }
+    &__cont{
+        margin-right: 26%;
+    }
+    .jptxt{
+        color: #FFF;
+    }
+}
+
+.twinplanet{
+    max-width: v.$pcw;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: clamp( 10px,10%, 210px);
+    padding-left: clamp( 10px,10%, 210px);
+    padding-top: 100px;
+    &__con{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        max-width: 692px;
+        width: 48%;
+        img{
+            width: 100%;
+        }
+        display: block;
+    }
+    &__logosp{
+        display: none;
+    }
+    &__txts{
+        max-width: 668px;
+        width: 45%;
+    }
+    &__ttl{
+        margin-left: 55%;
+        @include mix.bg();
+
+        background: url('../images/twinplanet.svg');
+        width: 361px;
+        height: 63px;
+        background-repeat: no-repeat;
+        margin-bottom: 75px;
+        @media screen and (max-width : 1400px){
+            width: 24.3vw;
+            height: 4.2vw;
+        }
+
+    }
+    &__txts{
+        padding-top: 5px;
+    }
+}
+
+
+.astar{
+    max-width: v.$pcw;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: clamp( 10px,10%, 210px);
+    padding-left: clamp( 10px,10%, 210px);
+    &__wrapper{
+        background: #ffff13;
+        width: 100vw;
+    }
+    &__con{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        max-width: 642px;
+        width: 44%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__txts{
+        max-width: 642px;
+        width: 44%;
+    }
+    &__ttl{
+        margin-right: 55%;
+        @include mix.bg();
+
+        background: url('../images/ttl_astar.svg');
+        width: 387px;
+        height: 64px;
+        background-repeat: no-repeat;
+        margin-bottom: 83px;
+        @media screen and (max-width : 1400px){
+            width: 24.3vw;
+            height: 4.2vw;
+        }
+
+    }
+
+}
+
+//タブレット
+@media screen and (max-width : v.$tbw){
+    .main__company{
+        padding-top: 20vw;
+    }
+
+    .whats{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding-right: 13%;
+        padding-left: 13%;
+        padding-top: 9vw;
+        &__cont{
+            margin-left:0;
+            display: block;
+            &--img{
+                width: 58%;
+                max-width: 406px;
+                margin: 9vw auto 0;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        &__ttl{
+            width: 58.12vw;
+            height: 6.9vw;
+            margin-bottom: 6.6vw;
+        }
+    
+    } 
+    .amano{
+        padding-top: 10vw;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding-right: 13%;
+        padding-left: 13%;
+        padding-bottom: 10vw;
+        &__ttl{
+            width: 48.4vw;
+            height: 6.72vw;
+            margin-bottom: 7vw;
+
+        }
+        &__cont{
+            margin-right: 0%;
+        }
+
+    }
+    .main__company--inner{
+        padding-top: 27vw;
+    }
+    .twinplanet{
+        max-width: v.$pcw;
+        width: 100%;
+        margin: 0 auto;
+        padding-right: 13%;
+        padding-left: 13%;
+        padding-top: 0;
+        &__con{
+            display: block;
+            justify-content: space-between;
+            align-items: start;
+        }
+        &__logo{
+            display: none;
+        }
+        &__logosp{
+            display: block;
+            text-align: right;
+            margin-top: 9vw;
+            span{
+                width: 36.4vw;
+                display: inline-block;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        &__txts{
+            max-width: 100%;
+            width: 100%;
+        }
+        &__ttl{
+            margin-left: 0;
+            width: 38vw;
+            height: 6.6vw;
+            background-repeat: no-repeat;
+            margin-bottom: 7vw;
+    
+        }
+        &__txts{
+            padding-top: 0;
+        }
+    }
+    .astar{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding-right: 13%;
+        padding-left: 13%;
+        &__con{
+            display: block;
+        }
+        &__logo{
+            max-width:100%;
+            width: 100%;
+            text-align: right;
+            span{
+                display: inline-block;
+                width: 36.2vw;
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__txts{
+            max-width:100%;
+            width: 100%;
+            margin-bottom: 8vw;
+
+        }
+        &__ttl{
+            margin-right: 0;
+
+            width: 40.4vw;
+            height: 6.71vw;
+            margin-bottom: 7.2vw;
+
+    
+        }
+    
+    }
+}
+
+
+
+//roadmap
+.roadmap{
+    background: url('../images/bg1.jpg') no-repeat 0 top;
+    background-size: 100% auto;
+    padding-top: 14.2%;
+    &__image{
+
+    }
+    &__inner{
+        width: 100vw;
+        background:linear-gradient(#FB33D9, #2409f8, );
+        padding-bottom: 165px;
+
+    }
+    &__ttl{
+        @include mix.bg();
+        background: url('../images/ttl_roadmap.svg');
+        width: 245px;
+        height: 81px;
+        background-repeat: no-repeat;
+        margin-bottom: 70px;
+        @media screen and (max-width : 1400px){
+            width: 16.55vw;
+            height: 5.47vw;
+        }
+    }
+    &__contents{
+        max-width: v.$pcw;
+        width: 100%;
+        margin: 0 auto;
+        padding-right: clamp( 10px,10%, 210px);
+        padding-left: clamp( 10px,10%, 210px);
+        padding-top: 100px;
+    }
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__fv{
+        width: 47%;
+        max-width: 691px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__contxt{
+        width: 45%;
+        max-width: 660px;
+        &--list{
+            li{
+
+            }
+        }
+    }
+    &__list{
+        margin: 0;
+        padding: 0;
+        color: #FFF;
+        li{
+            list-style: none;
+            border-bottom: solid 2px #FFF;
+            padding: 30px 0;
+            cursor: pointer;
+            display: flex;
+            &:first-child{
+                border-top: solid 2px #FFF;
+            }
+
+        }
+        &--btn{
+            cursor: pointer;
+            width: 70px;
+            min-height: 47px;
+            min-width: 70px;
+            background: url('./images/open_btn.svg') no-repeat 0 0;
+            background-size: 47px 47px;
+            &.open{
+                background: url('./images/close_btn.svg') no-repeat 0 0;
+                background-size: 47px 47px;
+
+            }
+        }
+        &--menu{
+            display: none;
+            padding-top: 30px;
+            line-height: 2.5;
+            @include mix.fz(18);
+            @media screen and (max-width : 1400px){
+                @include mix.fz(16);
+
+            }
+
+        }
+        &--ttl{
+            @include mix.fz(24);
+            line-height: 1;
+            font-weight: 800;
+            display: flex;
+            padding-top:13px;
+
+            align-items: center;
+            @media screen and (max-width : 1400px){
+                @include mix.fz(20);
+
+            }
+        }
+    }
+    &__subttl{
+        text-align: left;
+        font-weight: 800;
+        @include mix.fz(21);
+        margin-top: 77px;
+        display: block;
+        cursor: pointer;
+        span{
+            display: inline-block;
+            background: #FFF;
+            padding: 30px 28px;
+            border-radius: 50px;
+            line-height: 1;
+
+        }
+    }
+}
+.team{
+    background: url('../images/bg3.jpg') no-repeat 0 top;
+    background-size: 100% auto;
+    padding-top: 14.2%;
+    &__inner{
+        width: 100vw;
+        background: #ffff09;
+        padding-bottom: 90px;
+        padding-top: 110px;
+    }
+    &__ttl{
+        @include mix.bg();
+        background: url('../images/ttl_team.svg');
+        width: 138px;
+        height: 64px;
+        margin: 0 auto 112px;
+        background-repeat: no-repeat;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    &__members{
+        display: flex;
+        padding: 0;
+        li{
+           width: 33.33vw;
+           min-width: 33.33vw; 
+           list-style-type: none;
+        }
+        &--name{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            @include mix.fz(30);
+            line-height: 1.2;
+            span{
+                font-weight: bolder;
+            }
+        }
+    }
+    .pc{
+        display: block;
+    }
+    .sp{
+        display: none;
+    }
+}
+.faq{
+    padding: 154px 0 170px;
+    &__inner{
+        max-width: 1125px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__ttl{
+        @include mix.bg();
+        background: url('../images/ttl_faq.svg');
+        width: 98px;
+        height: 65px;
+        background-repeat: no-repeat;
+        margin-bottom: 70px;
+       
+    }
+    &__list{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            border-bottom: solid 2px #000;
+            padding: 30px 0;
+            cursor: pointer;
+            display: flex;
+            &:first-child{
+                border-top: solid 2px #000;
+            }
+
+        }
+        &--btn{
+            cursor: pointer;
+            width: 70px;
+            min-height: 47px;
+            min-width: 70px;
+            background: url('./images/fa1open_btn.svg') no-repeat 0 0;
+            background-size: 47px 47px;
+            &.open{
+                background: url('./images/faqclose_btn.svg') no-repeat 0 0;
+                background-size: 47px 47px;
+
+            }
+        }
+        &--menu{
+            display: none;
+            padding-top: 30px;
+            @include mix.fz(24);
+            line-height: 1.6;
+            font-weight: 800;
+            @media screen and (max-width : 1400px){
+                @include mix.fz(20);
+
+            }
+
+        }
+        &--ttl{
+            @include mix.fz(24);
+            line-height: 1.6;
+            font-weight: 800;
+            @media screen and (max-width : 1400px){
+                @include mix.fz(20);
+
+            }
+            &.open{
+                color: #0000FF;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : v.$tbw){
+    .roadmap{
+        &__inner{
+            padding-bottom: 13vw;
+
+        }
+        &__ttl{
+            width: 25.7vw;
+            height: 8.6vw;
+            margin: 0 auto 7vw;
+        }
+        &__contents{
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding-right: 13%;
+            padding-left: 13%;
+            padding-top: 6.6vw;
+
+        }
+        &__flex{
+            display: block;
+        }
+        &__fv{
+            width: 100%;
+            max-width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__contxt{
+            width: 100%;
+            max-width: 100%;
+
+        }
+        &__list{
+            li{
+                list-style: none;
+                border-bottom: solid 2px #FFF;
+                padding: 24px 0;
+                cursor: pointer;
+                display: flex;
+                &:first-child{
+                    border-top: solid 2px #FFF;
+                }
+    
+            }
+            &--btn{
+                cursor: pointer;
+                width: 50px;
+                min-height: 32px;
+                min-width: 50px;
+                background: url('./images/open_btn.svg') no-repeat 0 0;
+                background-size: 32px 32px;
+                &.open{
+                    background: url('./images/close_btn.svg') no-repeat 0 0;
+                    background-size: 32px 32px;
+                }
+            }
+            &--menu{
+                display: none;
+                padding-top: 20px;
+                @include mix.fz(16);
+    
+            }
+            &--ttl{
+                @include mix.fz(16);
+                padding-top: 8px;
+
+            }
+        }
+        &__subttl{
+            @include mix.fz(16);
+            margin-top: 6.2vw;
+            text-align: center;
+            margin-bottom: 8vw;
+
+            span{
+                padding: 20px 24px;
+                border-radius: 50px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+    .team{
+        padding-top: 14.2%;
+        &__inner{
+            width: 100vw;
+            padding-bottom: 10px;
+            padding-top: 5.9vw;
+        }
+        &__ttl{
+            @include mix.bg();
+            background: url('../images/ttl_team.svg');
+            width: 14.5vw;
+            height: 6.72vw;
+            margin: 0 auto 6vw;
+            background-repeat: no-repeat;
+        }
+
+        .pc{
+            display: none;
+        }
+        .sp{
+            display: block;
+        }
+    }
+    .faq{
+        padding: 9vw 0;
+        &__inner{
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 13%;
+        }
+        &__ttl{
+            @include mix.bg();
+            background: url('../images/ttl_faq.svg');
+            width: 10.4vw;
+            height: 6.9vw;
+            margin-bottom: 8.5vw;           
+        }
+        &__list{
+            margin: 0;
+            padding: 0;
+            &--btn{
+                width: 50px;
+                min-height: 32px;
+                min-width: 50px;
+                background: url('./images/fa1open_btn.svg') no-repeat 0 0;
+                background-size: 32px 32px;
+                &.open{
+                    background: url('./images/faqclose_btn.svg') no-repeat 0 0;
+                    background-size: 32px 32px;
+    
+                }
+            }
+            &--menu{
+                display: none;
+                padding-top: 30px;
+                @include mix.fz(16);
+                line-height: 1.6;
+                font-weight: 800;
+    
+            }
+            &--ttl{
+                @include mix.fz(16);
+                line-height: 1.6;
+                font-weight: 800;
+               
+            }
+        }
+    }
+}
+
+
+.terms{
+    padding: 154px 0 170px;
+    &__inner{
+        max-width: 1125px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__txt{
+        text-indent: -1em; 
+        padding-left: 1em;
+        margin: 0 0 10px;
+        font-size: 14px;
+    }
+    &__txt2{
+        margin: 0 0 10px;
+        font-size: 14px;
+    }
+    &__txt2ttl{
+        margin: 30px 0 10px;
+        font-size: 14px;
+    }
+    &__ttl{
+        @include mix.bg();
+        background: url('../images/ttl_terms.svg');
+        width: 163px;
+        height: 64px;
+        background-repeat: no-repeat;
+        margin-bottom: 70px;
+        line-height: 1.8;
+    }
+    &__list{
+        margin: 0;
+        padding: 0;
+        li{
+            list-style: none;
+            border-bottom: solid 2px #000;
+            padding: 30px 0;
+            cursor: pointer;
+            display: flex;
+            &:first-child{
+                border-top: solid 2px #000;
+            }
+
+        }
+        &--btn{
+            margin-right: 20px;
+            img{
+                animation: rotate-anime2 0.2s linear 1;
+                width: 36px!important;
+                height: 36px;
+            }
+            &.open{
+                img{
+                    width: 36px!important;
+                    height: 36px;
+                    max-width: 36px;
+                    animation: rotate-anime 0.2s linear 1;
+                    transform: rotate( -180deg );
+
+                }
+            }
+        }
+        &--menu{
+            display: none;
+            padding-top: 30px;
+            @include mix.fz(16);
+            line-height: 1.6;
+            @media screen and (max-width : 1400px){
+                @include mix.fz(20);
+
+            }
+
+        }
+        &--ttl{
+            @include mix.fz(24);
+            line-height: 1.6;
+            font-weight: 800;
+            @media screen and (max-width : 1400px){
+                @include mix.fz(20);
+
+            }
+
+        }
+    }
+    @media screen and (max-width : v.$tbw){
+        padding: 9vw 0;
+        &__inner{
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 13%;
+        }
+        &__ttl{
+            @include mix.bg();
+            background: url('../images/ttl_terms.svg') no-repeat;
+            width: 15vw;
+            height: 6.9vw;
+            margin-bottom: 8.5vw;       
+            
+        }
+    }
+}
+
+
+@keyframes rotate-anime {
+    0%  {transform: rotate(0);}
+    100%  {transform: rotate(-180deg);}
+  }
+  @keyframes rotate-anime2 {
+    0%  {transform: rotate(-180deg);}
+    100%  {transform: rotate(0);}
+  }
+
+  .roadmap__fv{
+    img{
+        border: solid 1px rgba(255,255,255, 0.5);
+        box-shadow:  10px 10px 10px 0px rgba(0,0,0,0.2);;
+    }
+  }
+  

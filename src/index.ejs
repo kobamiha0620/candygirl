@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+  <meta name="description" content="The NFT fine art collection “CANDY GIRL” by world renowned artist Yoshitaka Amano. It's more than a PFP project, it offers many utilities and holder benefits."/>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+  <link rel="canonical" href="https://candygirl-nft.com/">
+
+  <title>Candy Girl</title>
+
+  <%- include("./template/_head.ejs") %>
+
+  <link rel="stylesheet" href="./style/index.scss" />
+  <body id="english">
+    <div class="content">
+    <%- include("./template/_header.ejs") %>
+
+    <main id="main" class="main">
+
+      <%- include("./template/_mainen.ejs") %>
+
+    </main>
+  </div>
+    <%- include("./template/_footer.ejs") %>
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript" charset="utf-8" src="./script/script.js"></script>
+<!-------------------JS---------------------------------------------------------------->  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<!------------------------------------------------------------------------------------->  
+
+  
+
+  <script>
+
+$(function () {
+  $('.carousel').slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    arrows: true,
+    dots: false,
+
+  });
+});
+  </script>
+
+  </body>
+
+  
+</html>

@@ -1,0 +1,115 @@
+@use "_reset.scss";
+@use "_variables.scss" as v;
+@use "_mixin.scss" as mix;
+@use "_header.scss";
+@use "_main.scss";
+
+@use "_footer.scss";
+
+html {
+  height: 100%;
+}
+// body {
+//   margin: 0;
+//   padding: 0;
+//   min-height: 100%;
+//   display: grid;
+//   grid-template-rows: 1fr auto;
+// }
+// header {
+//   width: 100%;
+//   background: #FFF;
+// }
+// footer {
+//   grid-row-start: 2;
+//   grid-row-end: 3;
+//   width: 100%;
+//   background: v.$yellow;
+// }
+body{
+  overflow-x: hidden;
+}
+header {
+  
+  background: #FFF;
+}
+footer {
+  background: v.$yellow;
+}
+*{
+  font-family: "ヒラギノ角ゴ ProN W3","HiraKakuProN-W3","ヒラギノ角ゴ Pro W3","HiraKakuPro-W3","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS Pgothic","Osaka",sans-serif,Helvetica, Helvetica Neue, Arial, Verdana;
+}
+
+.pc{
+  display: block;
+}
+.sp{
+  display: none;
+}
+
+    //タブレットサイズ
+    @media screen and (max-width : v.$tbw){
+      .pc{
+        display: none;
+      }
+      .sp{
+        display: block;
+      }
+      
+    }
+    //SPサイズ
+    @media screen and (max-width : v.$spw){
+
+    }
+
+
+
+
+// .scroll-fade  {opacity: 0; transition: all 2s/*処理にかかる時間*/;}
+// .scroll-fade2, .scroll-fade3{opacity: 0; transition: all 2s/*処理にかかる時間*/;}
+// .scroll-up{opacity: 0; transform: translateY(100px)/*スクロールアップする距離*/; transition: all 2s/*処理にかかる時間*/;}
+// .scroll-up.done, .scroll-fade.done, .scroll-fade2.done, .scroll-fade3.done{opacity : 1; transform : translate(0, 0);}
+// .load-fade {opacity : 0; transition : all 2s/*処理にかかる時間*/;}
+// .load-up{opacity: 0; transform: translateY(100px)/*スクロールアップする距離*/; transition: all 2s/*処理にかかる時間*/;}
+// .load-up.done, .load-fade.done{opacity : 1; transform : translate(0, 0);}
+
+
+.modal_bg{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  display: none;
+  z-index: 4;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%)
+             translateY(-50%);
+}
+#image{
+  display: none;
+}
+.roadmap__img{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  z-index: 4;
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%)
+             translateY(-50%);
+  img{
+    width: 90%;
+    height: auto;
+
+  }
+  &--inner{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+} 
